@@ -177,7 +177,8 @@
         1. Install the connector and configure your Cargoson account credentials
         2. Add your carriers and upload your negotiated pricelists
         3. Start managing shipments directly from your Odoo interface
-
+	4. this header updated
+		
         For more information and support, visit: https://www.erppartner.ee/cargoson and https://www.cargoson.com
     """,
     'category': 'Inventory/Delivery',
