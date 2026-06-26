@@ -1,0 +1,91 @@
+<odoo>
+    <data>
+
+        <record id="delivery_cargoson_view_order_form" model="ir.ui.view">
+            <field name="name">view.sale.order</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='other_information']" position="after">
+                    <page string="Delivery">
+                        <group>
+                            <group>
+                                <field name="carrier_id" string="Shipping Method"/>
+                                <field name="carrier_cost"/>
+                                <field name="service_name" string="Carrier"/>
+                                <field name="choose_service"/>
+                                <field name="incoterm"/>
+                                <label for="cargoson_ref"/>
+                                <div name="tracking">
+                                    <field name="cargoson_ref" class="oe_inline text-break"/>
+                                    <button type='object' class="oi oi-arrow-right oe_link" name="cargoson_link" string="Cargoson Link"/>
+                                </div>
+                            </group>
+                            <group>
+                                <label for="label_attachment_id" string="Label"/>
+                                <field name="label_attachment_id" widget="binary" filename="label_attachment_id.name" invisible="not label_attachment_id"/>
+                                <field name="label_url" invisible="label_attachment_id"/>
+                                <div colspan='2'>
+                                    <button name="action_cargoson_label_url" string="View/Download Label" type="object" class="oe_inline fa fa-arrow-right oe_link" invisible="not label_attachment_id and not label_url"/>
+                                </div>
+                                <label for="cmr_attachment_id" string="CMR"/>
+                                <field name="cmr_attachment_id" widget="binary" filename="cmr_attachment_id.name" invisible="not cmr_attachment_id"/>
+                                <field name="cmr_url" invisible="cmr_attachment_id"/>
+                                <div colspan='2'>
+                                    <button name="action_cargoson_cmr_url" string="View/Download CMR" type="object" class="oe_inline fa fa-arrow-right oe_link" invisible="not cmr_attachment_id and not cmr_url"/>
+                                </div>
+                                <label for="bol_attachment_id" string="BOL"/>
+                                <field name="bol_attachment_id" widget="binary" filename="bol_attachment_id.name" invisible="not bol_attachment_id"/>
+                                <field name="bol_url" invisible="bol_attachment_id"/>
+                                <div colspan='2'>
+                                    <button name="action_cargoson_bol_url" string="View/Download BOL" type="object" class="oe_inline fa fa-arrow-right oe_link" invisible="not bol_attachment_id and not bol_url"/>
+                                </div>
+                                <label for="waybill_attachment_id" string="Waybill"/>
+                                <field name="waybill_attachment_id" widget="binary" filename="waybill_attachment_id.name" invisible="not waybill_attachment_id"/>
+                                <field name="waybill_url" invisible="waybill_attachment_id"/>
+                                <div colspan='2'>
+                                    <button name="action_cargoson_waybill_url" string="View/Download Waybill" type="object" class="oe_inline fa fa-arrow-right oe_link" invisible="not waybill_attachment_id and not waybill_url"/>
+                                </div>
+                                <field name="tracking_url"/>
+                                <div colspan='2'>
+                                    <button name="action_cargoson_tracking_url" string="View/Download Label" type="object" class="oe_inline fa fa-arrow-right oe_link"/>
+                                </div>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="error"/>
+                                <button type='object' class="oi oi-arrow-right oe_link" name="update_picking" string="Update Picking"/>
+                            </group>
+                            <group>
+
+                            </group>
+                        </group>
+                        <group string="Package Units (from shipping method)">
+                            <field name="delivery_weight_uom" readonly="1" placeholder="—"/>
+                            <field name="delivery_length_uom" readonly="1" placeholder="—"/>
+                        </group>
+                            <field name="package_types" nolabel="1">
+                                    <list editable="bottom">
+                                        <field name="package_type"/>
+                                        <field name="total_weight"/>
+                                        <field name="weight"/>
+                                        <field name="height"/>
+                                        <field name="width"/>
+                                        <field name="depth"/>
+                                        <field name="qty"/>
+                                    </list>
+                                </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <menuitem id="menu_sale_packaging_types"
+              name="Transport Packages"
+              parent="sale.menu_sales_config"
+              action="stock.action_package_type_view"
+              sequence="5"/>
+
+    </data>
+</odoo>

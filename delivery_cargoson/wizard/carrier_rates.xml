@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<odoo>
+    <record model="ir.ui.view" id="carrier_rates_form_view">
+        <field name="name">carrier.rates.form.view</field>
+        <field name="model">carrier.rates</field>
+        <field name="arch" type="xml">
+            <form string="Carrier Rates">
+                <sheet>
+                    <group>
+                        <field name="name" string="carrier"/>
+                        <field name="price"/>
+                        <field name="service" string="Service Name"/>
+                        <field name="service_id"/>
+                        <field name="estimated_delivery_date"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="carrier_rates_tree_view" model="ir.ui.view">
+        <field name="name">carrier.rates.tree.view</field>
+        <field name="model">carrier.rates</field>
+        <field name="priority">2</field>
+        <field name="arch" type="xml">
+            <list string="Carrier Rates">
+                <field name="choose"/>
+                <field name="name" string="carrier"/>
+                <field name="price"/>
+                <field name="service" string="Service Name"/>
+                <field name="service_id"/>
+                <field name="estimated_delivery_date"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="carrier_rates_action" model="ir.actions.act_window">
+        <field name="name">Carrier Rates</field>
+        <field name="res_model">carrier.rates</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+<!--    <menuitem action="action_repair_category_custom"-->
+<!--        id="menu_repair_category"-->
+<!--        parent="job_card.menu_job_card_setting"-->
+<!--        groups="project.group_project_manager"-->
+<!--        sequence="2"/>-->
+</odoo>

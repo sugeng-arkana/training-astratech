@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="product_product_delivery_cargoson" model="product.product">
+            <field name="name">Cargoson</field>
+            <field name="default_code">Cargoson</field>
+            <field name="type">service</field>
+            <field name="categ_id" ref="delivery.product_category_deliveries"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="False"/>
+            <field name="list_price">0.0</field>
+            <field name="invoice_policy">order</field>
+            <field name="taxes_id" eval='[(5,)]'/>
+        </record>
+
+        <record id="cargoson_packaging_ctn" model="stock.package.type">
+            <field name="name">CTN: Carton</field>
+            <field name="shipper_package_code">CTN</field>
+            <field name="package_carrier_type">cargoson</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="cargoson_packaging_eur" model="stock.package.type">
+            <field name="name">EUR pll(120*80cm)</field>
+            <field name="shipper_package_code">EUR</field>
+            <field name="package_carrier_type">cargoson</field>
+            <field name="width">80</field>
+            <field name="height">100</field>
+            <field name="packaging_length">120</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="cargoson_packaging_fin" model="stock.package.type">
+            <field name="name">FIN - Industrial pallet</field>
+            <field name="shipper_package_code">FIN</field>
+            <field name="package_carrier_type">cargoson</field>
+            <field name="width">100</field>
+            <field name="packaging_length">120</field>
+            <field name="height">1</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="cargoson_packaging_hpl" model="stock.package.type">
+            <field name="name">HPL – Half Pallet</field>
+            <field name="shipper_package_code">HPL</field>
+            <field name="package_carrier_type">cargoson</field>
+            <field name="width">60</field>
+            <field name="packaging_length">80</field>
+            <field name="height">1</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="cargoson_packaging_pll" model="stock.package.type">
+            <field name="name">PLL – Pallet</field>
+            <field name="shipper_package_code">PLL</field>
+            <field name="package_carrier_type">cargoson</field>
+            <field name="is_active">True</field>
+            <field name="is_crate">False</field>
+        </record>
+
+        <record id="cargoson_packaging_pll2" model="stock.package.type">
+            <field name="name">PLL - Ship with Crate</field>
+            <field name="shipper_package_code">PLL</field>
+            <field name="package_carrier_type">cargoson</field>
+            <field name="is_active">False</field>
+            <field name="is_crate">True</field>
+        </record>
+
+        <record id="cargoson_packaging_cll" model="stock.package.type">
+            <field name="name">CLL – custom package</field>
+            <field name="shipper_package_code">PLL</field>
+            <field name="package_carrier_type">cargoson</field>
+            <field name="use_product_dimensions">True</field>
+            <field name="is_crate">False</field>
+            <field name="is_active">False</field>
+        </record>
+
+        <record id="cargoson_packaging_cll2" model="stock.package.type">
+            <field name="name">CLL – custom package</field>
+            <field name="shipper_package_code">PLL</field>
+            <field name="package_carrier_type">cargoson</field>
+            <field name="use_product_dimensions">False</field>
+            <field name="is_crate">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+
+        <record id="cargoson_packaging_document" model="stock.package.type">
+            <field name="name">DOC: Dokument</field>
+            <field name="shipper_package_code">DOC</field>
+            <field name="package_carrier_type">cargoson</field>
+        </record>
+
+        <record id="cargoson_packaging_usp" model="stock.package.type">
+            <field name="name">USP (48 x 40")</field>
+            <field name="shipper_package_code">USP</field>
+            <field name="package_carrier_type">cargoson</field>
+            <field name="width">40</field>
+            <field name="height">48</field>
+            <field name="packaging_length">48</field>
+            <field name="base_weight">25</field>
+            <field name="max_weight">0</field>
+            <field name="use_product_dimensions" eval="False"/>
+            <field name="is_crate" eval="False"/>
+            <field name="is_active" eval="True"/>
+            <field name="qty_editable" eval="False"/>
+            <field name="use_default_qty" eval="True"/>
+            <field name="default_qty">1.0</field>
+        </record>
+
+        <record id="cargoson_packaging_usp_l" model="stock.package.type">
+            <field name="name">USP_L (48 x 48")</field>
+            <field name="shipper_package_code">USP_L</field>
+            <field name="package_carrier_type">cargoson</field>
+            <field name="width">48</field>
+            <field name="height">40</field>
+            <field name="packaging_length">48</field>
+            <field name="base_weight">25</field>
+            <field name="max_weight">0</field>
+            <field name="use_product_dimensions" eval="False"/>
+            <field name="is_crate" eval="False"/>
+            <field name="is_active" eval="True"/>
+            <field name="qty_editable" eval="False"/>
+            <field name="use_default_qty" eval="True"/>
+            <field name="default_qty">1.0</field>
+        </record>
+
+        <record id="cargoson_packaging_usp_m" model="stock.package.type">
+            <field name="name">USP_M (42 x 42")</field>
+            <field name="shipper_package_code">USP_M</field>
+            <field name="package_carrier_type">cargoson</field>
+            <field name="width">42</field>
+            <field name="height">45</field>
+            <field name="packaging_length">42</field>
+            <field name="base_weight">25</field>
+            <field name="max_weight">0</field>
+            <field name="use_product_dimensions" eval="False"/>
+            <field name="is_crate" eval="False"/>
+            <field name="is_active" eval="True"/>
+            <field name="qty_editable" eval="False"/>
+            <field name="use_default_qty" eval="True"/>
+            <field name="default_qty">1.0</field>
+        </record>
+
+        <record id="cargoson_packaging_ip" model="stock.package.type">
+            <field name="name">IP (100 x 100cm) - Industrial Pallet</field>
+            <field name="shipper_package_code">IP</field>
+            <field name="package_carrier_type">cargoson</field>
+            <field name="width">100</field>
+            <field name="height">150</field>
+            <field name="packaging_length">100</field>
+            <field name="base_weight">10</field>
+            <field name="max_weight">0</field>
+            <field name="use_product_dimensions" eval="False"/>
+            <field name="is_crate" eval="False"/>
+            <field name="is_active" eval="True"/>
+            <field name="qty_editable" eval="False"/>
+            <field name="use_default_qty" eval="True"/>
+            <field name="default_qty">1.0</field>
+        </record>
+
+        <record id="delivery_carrier_cargoson_picking" model="delivery.carrier">
+            <field name="name">Cargoson Booking</field>
+            <field name="product_id" ref="delivery_cargoson.product_product_delivery_cargoson"/>
+            <field name="delivery_type">cargoson</field>
+            <field name="integration_level">rate_and_ship</field>
+            <field name="cargoson_email"></field>
+            <field name="cargoson_password"></field>
+            <field name="use_for">picking</field>
+            <field name="cargoson_default_package_type_id" ref="delivery_cargoson.cargoson_packaging_eur"/>
+            <field name="sequence">10</field>
+            <field name="fixed_price">0.0</field>
+            <field name="prod_environment">False</field>
+            <field name="collection_time">9.0</field>
+        </record>
+
+        <record id="delivery_carrier_cargoson_sale" model="delivery.carrier">
+            <field name="name">Cargoson Draft</field>
+            <field name="product_id" ref="delivery_cargoson.product_product_delivery_cargoson"/>
+            <field name="delivery_type">cargoson</field>
+            <field name="integration_level">rate</field>
+            <field name="cargoson_email"></field>
+            <field name="cargoson_password"></field>
+            <field name="use_for">sale</field>
+            <field name="cargoson_default_package_type_id" ref="delivery_cargoson.cargoson_packaging_eur"/>
+            <field name="sequence">20</field>
+            <field name="fixed_price">0.0</field>
+            <field name="prod_environment">False</field>
+            <field name="collection_time">9.0</field>
+        </record>
+
+    </data>
+</odoo>

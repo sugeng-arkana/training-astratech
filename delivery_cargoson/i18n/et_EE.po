@@ -1,0 +1,888 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* delivery_cargoson
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-22 16:37+0000\n"
+"PO-Revision-Date: 2024-09-24 17:27+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ee\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: delivery_cargoson
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.view_delivery_carrier_form_inherit_delivery_cargoson
+msgid ""
+"<i class=\"fa fa-exclamation-triangle\"/> In test environment, to avoid "
+"charges, your shippings are automatically <b>cancelled</b> after the label "
+"creation. The amount of cancelled shipment will be returned in next 3-4 "
+"days."
+msgstr ""
+"<i class=\"fa fa-exclamation-triangle\"/> In test environment, to avoid "
+"charges, your shippings are automatically <b>cancelled</b> after the label "
+"creation. The amount of cancelled shipment will be returned in next 3-4 "
+"days."
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_package_type__is_active
+msgid "Active"
+msgstr "Aktiivne"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__cmr_url
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_picking__cmr_url
+msgid "CMR URL"
+msgstr "CMR URL"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields.selection,name:delivery_cargoson.selection__delivery_carrier__cargoson_payment_method__cod
+msgid "COD"
+msgstr "Sularaha makse tarnel"
+
+#. module: delivery_cargoson
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.view_delivery_carrier_form_inherit_delivery_cargoson
+msgid "Cargonson Test Token"
+msgstr "Cargonson Test API võti"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields.selection,name:delivery_cargoson.selection__delivery_carrier__delivery_type__cargoson
+#: model:product.template,name:delivery_cargoson.product_product_delivery_cargoson_product_template
+msgid "Cargoson"
+msgstr "Cargoson"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_delivery_carrier__cargoson_access_token
+msgid "Cargoson Access Token"
+msgstr "Cargoson API Live võti"
+
+#. module: delivery_cargoson
+#: model:delivery.carrier,name:delivery_cargoson.delivery_carrier_cargoson_picking
+msgid "Cargoson Booking"
+msgstr "Cargoson broneering"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_channel__cargoson_code
+msgid "Cargoson Code"
+msgstr "Cargoson kood"
+
+#. module: delivery_cargoson
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.view_delivery_carrier_form_inherit_delivery_cargoson
+msgid "Cargoson Configuration"
+msgstr "Cargoson seaded"
+
+#. module: delivery_cargoson
+#: model:ir.actions.act_window,name:delivery_cargoson.action_cargoson_carrier
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.cargoson_carrier_view_tree
+msgid "Cargoson Courier"
+msgstr "Cargoson vedajad"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_delivery_carrier__cargoson_courier_ids
+msgid "Cargoson Couriers"
+msgstr "Cargosoni vedajad"
+
+#. module: delivery_cargoson
+#: model:delivery.carrier,name:delivery_cargoson.delivery_carrier_cargoson_sale
+msgid "Cargoson Draft"
+msgstr "Cargoson mustand"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_delivery_carrier__cargoson_email
+msgid "Cargoson Email"
+msgstr "Cargoson Email"
+
+#. module: delivery_cargoson
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.delivery_cargoson_view_order_form
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.stock_picking_form_inherit_cargoson
+msgid "Cargoson Link"
+msgstr "Cargoson Link"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_delivery_carrier__cargoson_password
+msgid "Cargoson Password"
+msgstr "Cargoson salasõna"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__cargoson_ref
+msgid "Cargoson Ref"
+msgstr "Cargosoni viide"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_carrier_rates__carrier_id
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__carrier_id
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_package_type__package_carrier_type
+msgid "Carrier"
+msgstr "Tarneviis"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__carrier_cost
+msgid "Carrier Cost"
+msgstr "Vedaja kulu"
+
+#. module: delivery_cargoson
+#: model:ir.actions.act_window,name:delivery_cargoson.carrier_rates_action
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_delivery_carrier__carrier_rates
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.carrier_rates_form_view
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.carrier_rates_tree_view
+msgid "Carrier Rates"
+msgstr "Vedaja tariifid"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_channel__channel_code
+msgid "Channel Code"
+msgstr "Kanali kood"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_channel__name
+msgid "Channel Name"
+msgstr "Kanali nimi"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_delivery_carrier__collection_time
+msgid "Collection Time From"
+msgstr "Pealekorje alates"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_delivery_carrier__delivery_time
+msgid "Collection Time To"
+msgstr "Pealekorje kuni"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_delivery_carrier__comment
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__comment
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_picking__comment
+msgid "Comment"
+msgstr "Kommentaar"
+
+#. module: delivery_cargoson
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.res_config_settings_view_form_stock_cargoson
+msgid "Compute shipping costs and ship with Shiprocket"
+msgstr "Arvuta hind ja saada"
+
+#. module: delivery_cargoson
+#: model:ir.model,name:delivery_cargoson.model_res_config_settings
+msgid "Config Settings"
+msgstr "Seadistused"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_courier__cargoson_courier_id
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_courier__carrier_id
+msgid "Courier ID"
+msgstr "Vedaja ID"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_courier__name
+msgid "Courier Name"
+msgstr "Vedaja"
+
+#. module: delivery_cargoson
+#. odoo-python
+#: code:addons/delivery_cargoson/models/stock_package_type.py:0
+#, python-format
+msgid "Crate must be disable!"
+msgstr "Kasti seadete viga!"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_delivery_carrier__crate_product_category
+msgid "Crate product category"
+msgstr "Transpordikasti tootekategooria"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_channel__create_uid
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_courier__create_uid
+#: model:ir.model.fields,field_description:delivery_cargoson.field_carrier_rates__create_uid
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_package_types__create_uid
+#: model:ir.model.fields,field_description:delivery_cargoson.field_picking_choose_package_types__create_uid
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_choose_package_types__create_uid
+msgid "Created by"
+msgstr "Autor"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_channel__create_date
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_courier__create_date
+#: model:ir.model.fields,field_description:delivery_cargoson.field_carrier_rates__create_date
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_package_types__create_date
+#: model:ir.model.fields,field_description:delivery_cargoson.field_picking_choose_package_types__create_date
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_choose_package_types__create_date
+msgid "Created on"
+msgstr "Aeg"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_package_type__default_product_id
+msgid "Default Product"
+msgstr "Vaikimisi toode"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_package_type__default_qty
+msgid "Default Qty"
+msgstr "Vaikimise kogus"
+
+#. module: delivery_cargoson
+#. odoo-python
+#: code:addons/delivery_cargoson/models/stock_package_type.py:0
+#, python-format
+msgid "Default Size Checkbox must be disable."
+msgstr "Vaikimise suuruse valik on vale."
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,help:delivery_cargoson.field_product_product__dimensions_uom_id
+#: model:ir.model.fields,help:delivery_cargoson.field_product_template__dimensions_uom_id
+msgid "Default Unit of Measure used for dimension."
+msgstr "Vaikimisi mõõtühik suuruse jaoks."
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,help:delivery_cargoson.field_product_product__weight_uom_id
+#: model:ir.model.fields,help:delivery_cargoson.field_product_template__weight_uom_id
+msgid "Default Unit of Measure used for weight."
+msgstr "Vaikimisi mõõtühik kaalule."
+
+#. module: delivery_cargoson
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.delivery_cargoson_view_order_form
+msgid "Delivery"
+msgstr "Tarne"
+
+#. module: delivery_cargoson
+#: model:ir.model,name:delivery_cargoson.model_choose_delivery_carrier
+msgid "Delivery Carrier Selection Wizard"
+msgstr "Tarne transpordiviisi valiku loomine"
+
+#. module: delivery_cargoson
+#. odoo-python
+#: code:addons/delivery_cargoson/models/delivery_carrier.py:0
+#, python-format
+msgid "Delivery Time should be grater than collection time."
+msgstr "Tarneaeg peab olema peale pealekorje aega."
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_delivery_carrier__depth
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_package_types__depth
+#: model:ir.model.fields,field_description:delivery_cargoson.field_picking_choose_package_types__depth
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_choose_package_types__depth
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__depth
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_picking__depth
+msgid "Depth"
+msgstr "Sügavus"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_delivery_carrier__remain_weight
+msgid "Difference"
+msgstr "Vahe"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_product_product__dimensions_uom_id
+#: model:ir.model.fields,field_description:delivery_cargoson.field_product_template__dimensions_uom_id
+msgid "Dimension(UOM)"
+msgstr "Suuruse ühik"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_channel__display_name
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_courier__display_name
+#: model:ir.model.fields,field_description:delivery_cargoson.field_carrier_rates__display_name
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_package_types__display_name
+#: model:ir.model.fields,field_description:delivery_cargoson.field_picking_choose_package_types__display_name
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_choose_package_types__display_name
+msgid "Display Name"
+msgstr "Nimi"
+
+#. module: delivery_cargoson
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.extended_choose_delivery_carrier_view_form
+msgid "Draft Order"
+msgstr "Mustand telllimus"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_package_types__is_height_edit
+msgid "Edit Height"
+msgstr "Muuda kõrgust"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_package_types__is_length_edit
+msgid "Edit Length"
+msgstr "Muuda pikkust"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_delivery_carrier__qty_editable
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_package_type__qty_editable
+msgid "Edit Quantity"
+msgstr "Muuda kogust"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_package_types__is_width_edit
+msgid "Edit Width"
+msgstr "Muuda laiust"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,help:delivery_cargoson.field_delivery_carrier__cargoson_password
+msgid "Enter your Password from Cargoson account (API)."
+msgstr "Veateade."
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,help:delivery_cargoson.field_delivery_carrier__cargoson_email
+msgid "Enter your Username from Cargoson account (API)."
+msgstr ""
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__error
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_picking__error
+msgid "Error"
+msgstr "Veateade"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_carrier_rates__estimated_delivery_date
+msgid "Estimated Delivery Date"
+msgstr "Oodatav tarneaeg"
+
+#. module: delivery_cargoson
+#. odoo-python
+#: code:addons/delivery_cargoson/models/delivery_carrier.py:0
+#, python-format
+msgid "Failed to fetch cargoson Couriers(s), Please try again later."
+msgstr "Vedajate päring ebaõnnestus."
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,help:delivery_cargoson.field_sale_order__carrier_id
+msgid "Fill this field if you plan to invoice the shipping based on picking."
+msgstr ""
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,help:delivery_cargoson.field_delivery_carrier__cargoson_access_token
+msgid "Generate access token using Cargoson credentials"
+msgstr ""
+
+#. module: delivery_cargoson
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.extended_choose_delivery_carrier_view_form
+msgid "Get Price"
+msgstr "Hinnapäring"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,help:delivery_cargoson.field_delivery_carrier__cargoson_courier_ids
+msgid ""
+"Get all the integrated Couriers from your cargoson account.Based on the "
+"courier selections the rate will be fetched from the cargoson."
+msgstr "Vedajate päring Cargosonist."
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_delivery_carrier__height
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_package_types__height
+#: model:ir.model.fields,field_description:delivery_cargoson.field_picking_choose_package_types__height
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_choose_package_types__height
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__height
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_picking__height
+msgid "Height"
+msgstr "Kõrgus"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_channel__id
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_courier__id
+#: model:ir.model.fields,field_description:delivery_cargoson.field_carrier_rates__id
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_package_types__id
+#: model:ir.model.fields,field_description:delivery_cargoson.field_picking_choose_package_types__id
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_choose_package_types__id
+msgid "ID"
+msgstr "ID"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_delivery_carrier__incoterms_id
+#: model:ir.model.fields,field_description:delivery_cargoson.field_delivery_carrier__incoterms_id
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_picking__incoterms_id
+msgid "Incoterms"
+msgstr "Incoterms"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_product_product__is_crate
+#: model:ir.model.fields,field_description:delivery_cargoson.field_product_template__is_crate
+msgid "Is Crate"
+msgstr "On transpordikast"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__label_url
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_picking__label_url
+msgid "Label URL"
+msgstr "Sildi URL"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_channel__write_uid
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_courier__write_uid
+#: model:ir.model.fields,field_description:delivery_cargoson.field_carrier_rates__write_uid
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_package_types__write_uid
+#: model:ir.model.fields,field_description:delivery_cargoson.field_picking_choose_package_types__write_uid
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_choose_package_types__write_uid
+msgid "Last Updated by"
+msgstr "Viimati uuendas"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_channel__write_date
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_courier__write_date
+#: model:ir.model.fields,field_description:delivery_cargoson.field_carrier_rates__write_date
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_package_types__write_date
+#: model:ir.model.fields,field_description:delivery_cargoson.field_picking_choose_package_types__write_date
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_choose_package_types__write_date
+msgid "Last Updated on"
+msgstr "Viimati uuendatud"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__temp_max
+msgid "Max Temp"
+msgstr "Max Temp"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__temp_min
+msgid "Min Temp"
+msgstr "Min Temp"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_delivery_carrier__model_id
+msgid "Model"
+msgstr "Mudel"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_carrier_rates__name
+msgid "Name"
+msgstr "Nimi"
+
+#. module: delivery_cargoson
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.view_stock_package_type_form_cargoson
+msgid "One package line for multiple products"
+msgstr "Üks pakendi rida mitme toote jaoks"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_package_type__one_line_all
+msgid "Oneline for All Product?"
+msgstr "Üks pakend kõigi toodete jaoks."
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__package_product_id
+msgid "Package Product"
+msgstr "Pakend"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_delivery_carrier__package_qty
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__package_qty
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_picking__package_qty
+msgid "Package Qty"
+msgstr "Pakendite kogus"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_delivery_carrier__package_type
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_package_types__package_type
+#: model:ir.model.fields,field_description:delivery_cargoson.field_delivery_carrier__cargoson_default_package_type_id
+#: model:ir.model.fields,field_description:delivery_cargoson.field_picking_choose_package_types__package_type
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_choose_package_types__package_type
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__package_type
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_picking__package_type
+msgid "Package Type"
+msgstr "Pakend"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_delivery_carrier__package_types
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__package_types
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_picking__package_types
+msgid "Package Types"
+msgstr "Pakendid"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_delivery_carrier__cargoson_payment_method
+msgid "Payment Method"
+msgstr "Makseviis"
+
+#. module: delivery_cargoson
+#. odoo-python
+#: code:addons/delivery_cargoson/models/stock_package_type.py:0
+#, python-format
+msgid "Pick only one either shipping with. Crate or User Product dimensions"
+msgstr "Vali üks: transpordikast või toode"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_picking_choose_package_types__picking_id
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_choose_package_types__picking_id
+#: model:ir.model.fields.selection,name:delivery_cargoson.selection__delivery_carrier__use_for__picking
+msgid "Picking"
+msgstr "Laosiire"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__pick_up_date
+msgid "Pickup Date"
+msgstr "Pealekorje kpv"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields.selection,name:delivery_cargoson.selection__delivery_carrier__cargoson_payment_method__prepaid
+msgid "Prepaid"
+msgstr "Ettemaks"
+
+#. module: delivery_cargoson
+#: model:ir.model,name:delivery_cargoson.model_product_template
+msgid "Product"
+msgstr "Toode"
+
+#. module: delivery_cargoson
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.extended_choose_delivery_carrier_view_form
+msgid "Product Weight"
+msgstr "Toote kaal"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_delivery_carrier__production_token
+msgid "Production Token"
+msgstr "Production Token"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_delivery_carrier__production_url
+msgid "Production URL"
+msgstr "Production URL"
+
+#. module: delivery_cargoson
+#. odoo-python
+#: code:addons/delivery_cargoson/wizard/display_delivery_carrier.py:0
+#, python-format
+msgid "Production URL and Token is required! please check shipping method."
+msgstr "API võti on vajalik, palun kontrolli seadeid."
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_delivery_carrier__delivery_type
+msgid "Provider"
+msgstr "Hind"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_picking_choose_package_types__purchase_id
+#: model:ir.model.fields.selection,name:delivery_cargoson.selection__delivery_carrier__use_for__purchase
+msgid "Purchase"
+msgstr "Ost"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_package_types__qty
+#: model:ir.model.fields,field_description:delivery_cargoson.field_picking_choose_package_types__qty
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_choose_package_types__qty
+msgid "QTY"
+msgstr "Kogus"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_carrier_rates__price
+msgid "Rate"
+msgstr "Tariif"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_delivery_carrier__ref_height
+msgid "Ref Height"
+msgstr "Kõrgus"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_delivery_carrier__ref_length
+msgid "Ref Length"
+msgstr "Pikkus"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_delivery_carrier__ref_width
+msgid "Ref Width"
+msgstr "Laius"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_courier__reg_no
+msgid "Reg No"
+msgstr "Reg. nr"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_delivery_carrier__required_height
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_package_type__required_height
+msgid "Required Height"
+msgstr "Nõutud kõrgus"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_delivery_carrier__required_length
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_package_type__required_length
+msgid "Required Length"
+msgstr "Nõutud laius"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_delivery_carrier__required_width
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_package_type__required_width
+msgid "Required Width"
+msgstr "Nõutud laius"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_picking_choose_package_types__sale_id
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_choose_package_types__sale_id
+#: model:ir.model.fields.selection,name:delivery_cargoson.selection__delivery_carrier__use_for__sale
+msgid "Sale"
+msgstr "Müük"
+
+#. module: delivery_cargoson
+#. odoo-python
+#: code:addons/delivery_cargoson/models/cargoson_request.py:0
+#, python-format
+msgid "Sale Order or Picking is required to get rate."
+msgstr "Müügitellimus on puudu"
+
+#. module: delivery_cargoson
+#: model:ir.model,name:delivery_cargoson.model_sale_order
+msgid "Sales Order"
+msgstr "Müügitellimus"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_carrier_rates__choose
+msgid "Select"
+msgstr "Valik"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_carrier_rates__service
+msgid "Service"
+msgstr "Teenus"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_courier__service_id
+#: model:ir.model.fields,field_description:delivery_cargoson.field_carrier_rates__service_id
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__service_id
+msgid "Service ID"
+msgstr "Teenuse ID"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_courier__service_name
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__service_name
+msgid "Service Name"
+msgstr "Teenuse nimi"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_courier__carrier_short_name
+msgid "Service Short Name"
+msgstr "Teenus"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_courier__service_type
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__service_type
+msgid "Service Type"
+msgstr "Tüüp"
+
+#. module: delivery_cargoson
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.extended_choose_delivery_carrier_view_form
+msgid "Set Packages"
+msgstr "Vali pakendid"
+
+#. module: delivery_cargoson
+#. odoo-python
+#: code:addons/delivery_cargoson/models/cargoson_request.py:0
+#, python-format
+msgid "Shipment Created with Ref: %s"
+msgstr "Telllimus on loodud: %s"
+
+#. module: delivery_cargoson
+#: model:ir.model,name:delivery_cargoson.model_delivery_carrier
+msgid "Shipping Methods"
+msgstr "Tarneviisid"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_package_type__is_crate
+msgid "Shipping with Crate"
+msgstr "Transpordikastiga saatmine"
+
+#. module: delivery_cargoson
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.view_stock_package_type_form_cargoson
+msgid "Size: (L*W*H)"
+msgstr "Suurus (P*L*K9"
+
+#. module: delivery_cargoson
+#: model:ir.model,name:delivery_cargoson.model_stock_package_type
+msgid "Stock package type"
+msgstr "Lao pakendi tüüp"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,help:delivery_cargoson.field_stock_picking__cargoson_orders
+msgid ""
+"Store cargoson order(s) in a (+) separated string, used in cancelling the "
+"order."
+msgstr ""
+"Store cargoson order(s) in a (+) separated string, used in cancelling the "
+"order."
+
+#. module: delivery_cargoson
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.view_delivery_carrier_form_inherit_delivery_cargoson
+msgid "Sync Couriers from cargoson"
+msgstr "Lae vedajad Cargosonist"
+
+#. module: delivery_cargoson
+#. odoo-python
+#: code:addons/delivery_cargoson/wizard/display_delivery_carrier.py:0
+#, python-format
+msgid "Test Token is required! please check shipping method."
+msgstr "Test Token on nõutav! Palun kontrolli tarneviisi."
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,help:delivery_cargoson.field_delivery_carrier__cargoson_payment_method
+msgid ""
+"The method of payment. Can be either COD (Cash on delivery) Or Prepaid "
+"while creating cargoson order."
+msgstr ""
+"Makseviis. Võib olla kas COD (sularahas kättetoimetamisel) või ettemaks, "
+"kui luuakse kaubasaadetise tellimus."
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_delivery_carrier__total_planned_weight
+msgid "Total Planned"
+msgstr "Kokku planeeritud"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_package_types__total_weight
+#: model:ir.model.fields,field_description:delivery_cargoson.field_picking_choose_package_types__total_weight
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_choose_package_types__total_weight
+msgid "Total Weight"
+msgstr "Kaal kokku"
+
+#. module: delivery_cargoson
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.extended_choose_delivery_carrier_view_form
+msgid "Total estimated weight"
+msgstr "Ennustatud kaal kokku"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__tracking_url
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_picking__tracking_url
+msgid "Tracking URL"
+msgstr "Tracking URL"
+
+#. module: delivery_cargoson
+#: model:ir.model,name:delivery_cargoson.model_stock_picking
+msgid "Transfer"
+msgstr "Siirded"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_delivery_carrier__use_cost_sale
+msgid "Use Cost on Sales"
+msgstr "Kasuta kulu müügis"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_package_type__use_default_qty
+msgid "Use Default Qty?"
+msgstr "Kasuta standardkogust?"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_delivery_carrier__use_for
+#: model:ir.model.fields,field_description:delivery_cargoson.field_delivery_carrier__use_for
+msgid "Use For"
+msgstr "Rakenda"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_package_type__use_product_dimensions
+msgid "Use Product Dimensions"
+msgstr "Kasuta toote mõõte"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_cargoson_courier__vat_no
+msgid "VAT No"
+msgstr "KMKR nr"
+
+#. module: delivery_cargoson
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.delivery_cargoson_view_order_form
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.stock_picking_form_inherit_cargoson
+msgid "View/Download Label"
+msgstr "Vaata/Lae silt"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__waybill_url
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_picking__waybill_url
+msgid "Waybill URL"
+msgstr "Saatelehe URL"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_package_types__weight
+#: model:ir.model.fields,field_description:delivery_cargoson.field_picking_choose_package_types__weight
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_choose_package_types__weight
+msgid "Weight"
+msgstr "Kaal"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_product_product__weight_uom_id
+#: model:ir.model.fields,field_description:delivery_cargoson.field_product_template__weight_uom_id
+msgid "Weight(UOM)"
+msgstr "Kaal(UOM)"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_delivery_carrier__width
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_package_types__width
+#: model:ir.model.fields,field_description:delivery_cargoson.field_picking_choose_package_types__width
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_choose_package_types__width
+#: model:ir.model.fields,field_description:delivery_cargoson.field_sale_order__width
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_picking__width
+msgid "Width"
+msgstr "Laius"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_carrier_rates__wizard_id
+#: model:ir.model.fields,field_description:delivery_cargoson.field_choose_package_types__wizard_id
+msgid "Wizard"
+msgstr ""
+
+#. module: delivery_cargoson
+#. odoo-python
+#: code:addons/delivery_cargoson/models/stock_picking.py:0
+#, python-format
+msgid ""
+"Your delivery method has no redirect on courier provider's website to track "
+"this order."
+msgstr ""
+
+#. module: delivery_cargoson
+#: model:ir.model.fields.selection,name:delivery_cargoson.selection__stock_package_type__package_carrier_type__cargoson
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.stock_picking_form_inherit_cargoson
+msgid "cargoson"
+msgstr "Cargoson"
+
+#. module: delivery_cargoson
+#: model:ir.model,name:delivery_cargoson.model_cargoson_channel
+msgid "cargoson Channel"
+msgstr "Cargoson Channel"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_res_config_settings__module_delivery_cargoson
+msgid "cargoson Connector"
+msgstr "Cargoson Connector"
+
+#. module: delivery_cargoson
+#: model:ir.model,name:delivery_cargoson.model_cargoson_courier
+msgid "cargoson Courier"
+msgstr "Cargoson Courier"
+
+#. module: delivery_cargoson
+#. odoo-python
+#: code:addons/delivery_cargoson/models/cargoson_request.py:0
+#, python-format
+msgid "cargoson Error: %s"
+msgstr "Cargoson Error: %s"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,field_description:delivery_cargoson.field_stock_picking__cargoson_orders
+msgid "cargoson Order(s)"
+msgstr "Tellimused"
+
+#. module: delivery_cargoson
+#: model_terms:ir.ui.view,arch_db:delivery_cargoson.res_config_settings_view_form_stock_cargoson
+msgid "cargoson Shipping Methods"
+msgstr "Cargoson tarneviisid"
+
+#. module: delivery_cargoson
+#: model:ir.model.fields,help:delivery_cargoson.field_delivery_carrier__cargoson_default_package_type_id
+msgid ""
+"cargoson requires package dimensions for getting accurate rate, you can "
+"define these in a package type that you set as default"
+msgstr "Cargoson vajab toote dimensioone tarnehinna arvutamiseks"
+
+#. module: delivery_cargoson
+#: model:ir.model,name:delivery_cargoson.model_carrier_rates
+msgid "carrier.rates"
+msgstr ""
+
+#. module: delivery_cargoson
+#: model:ir.model,name:delivery_cargoson.model_choose_package_types
+msgid "choose.package.types"
+msgstr ""
+
+#. module: delivery_cargoson
+#: model:ir.model,name:delivery_cargoson.model_picking_choose_package_types
+msgid "picking.choose.package.types"
+msgstr ""
+
+#. module: delivery_cargoson
+#: model:ir.model,name:delivery_cargoson.model_sale_choose_package_types
+msgid "sale.choose.package.types"
+msgstr ""

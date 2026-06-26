@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="replan_delivery_carrier_view_form" model="ir.ui.view">
+        <field name="name">replan.delivery.carrier.form</field>
+        <field name="model">replan.delivery.carrier</field>
+        <field name="arch" type="xml">
+            <form string="Replan Delivery">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="available_carrier_ids" invisible="1"/>
+                            <field name="picking_id" readonly="1"/>
+                            <field name="carrier_id" domain="[('id', 'in', available_carrier_ids)]"/>
+                        </group>
+                        <group>
+                            <field name="comment"/>
+                            <field name="incoterms_id"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <button name="button_set_package" type="object" string="Set Packages" class="btn-primary"/>
+                        </group>
+                        <group>
+                            <div class="text-muted">
+                                <span>Units: Weight in </span><field name="cargoson_weight_uom" readonly="1" nolabel="1" class="oe_inline"/>
+                                <span> | Dimensions in </span><field name="cargoson_length_uom" readonly="1" nolabel="1" class="oe_inline"/>
+                            </div>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="package_types" nolabel="0">
+                            <list editable="bottom">
+                                <field name="package_type"/>
+                                <field name="total_weight"/>
+                                <field name="weight" string="Product Weight"/>
+                                <field name="height"/>
+                                <field name="width"/>
+                                <field name="depth"/>
+                                <field name="qty"/>
+                            </list>
+                        </field>
+                    </group>
+                    <group>
+                        <field name="carrier_rates" nolabel="0" options="{'no_open': True}">
+                            <list editable="bottom">
+                                <field name="choose"/>
+                                <field name="name" string="Carrier"/>
+                                <field name="price"/>
+                                <field name="service" string="Service Name"/>
+                                <field name="service_id"/>
+                                <field name="estimated_delivery_date"/>
+                            </list>
+                        </field>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="button_get_prices" class="btn-info" type="object" string="Get Price"/>
+                    <button name="button_confirm" class="btn-primary" type="object" string="Apply" data-hotkey="q"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

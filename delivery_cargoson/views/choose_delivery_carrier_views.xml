@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="extended_choose_delivery_carrier_view_form" model="ir.ui.view">
+        <field name="name">choose.delivery.carrier.form</field>
+        <field name="model">choose.delivery.carrier</field>
+        <field name="inherit_id" ref="delivery.choose_delivery_carrier_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='display_price']" position="attributes">
+                <attribute name="invisible">delivery_type == 'cargoson'</attribute>
+            </xpath>
+            <xpath expr="//field[@name='display_price']/parent::div" position="attributes">
+                <attribute name="invisible">delivery_type == 'cargoson'</attribute>
+            </xpath>
+            <!-- Left: comment / incoterms | Right: Set Packages + stats; lists full width -->
+            <xpath expr="//form/group" position="after">
+                <group invisible="delivery_type != 'cargoson'" name="cargoson_columns">
+                    <group>
+                        <field name="comment"/>
+                        <field name="incoterms_id"/>
+                    </group>
+                    <group>
+                        <div class="o_row justify-content-start pb-2">
+                            <button name="button_set_package" type="object" string="Set Packages" class="btn-primary"/>
+                        </div>
+                        <field name="cargoson_weight_uom" invisible="1"/>
+                        <field name="cargoson_length_uom" invisible="1"/>
+                        <field name="total_weight"/>
+                        <field name="total_planned_weight"/>
+                        <field name="remain_weight"/>
+                        <div class="text-muted">
+                            <span>Units: Weight in </span><field name="cargoson_weight_uom" readonly="1" nolabel="1" class="oe_inline"/>
+                            <span> | Dimensions in </span><field name="cargoson_length_uom" readonly="1" nolabel="1" class="oe_inline"/>
+                        </div>
+                    </group>
+                </group>
+                <group invisible="delivery_type != 'cargoson'" name="cargoson_package_types" col="1">
+                    <group>
+                        <field name="package_types" nolabel="0" colspan="1">
+                            <list editable="bottom">
+                                <field name="package_type"/>
+                                <field name="total_weight"/>
+                                <field name="weight" string="Product Weight"/>
+                                <field name="height"/>
+                                <field name="width"/>
+                                <field name="depth"/>
+                                <field name="qty"/>
+                            </list>
+                        </field>
+                    </group>
+                </group>
+                <group invisible="delivery_type != 'cargoson'" name="cargoson_carrier_rates" col="1">
+                    <group>
+                        <field name="integration_level" invisible="1"/>
+                        <field name="carrier_rates" nolabel="0" colspan="1" options="{'no_open': True}">
+                            <list editable="bottom">
+                                <field name="choose"/>
+                                <field name="name" string="Carrier"/>
+                                <field name="price"/>
+                                <field name="service" string="Service Name"/>
+                                <field name="service_id"/>
+                                <field name="estimated_delivery_date"/>
+                            </list>
+                        </field>
+                    </group>
+                </group>
+            </xpath>
+            <xpath expr="//footer" position="inside">
+                <button name="get_prices" class="btn-info" type="object" invisible="delivery_type != 'cargoson'" string="Get Price"/>
+            </xpath>
+            <!-- Hide standard Add button(s) when Cargoson draft (rate): show only Create Draft -->
+            <xpath expr="//button[@name='button_confirm'][2]" position="attributes">
+                <attribute name="invisible">use_for != 'picking' or (delivery_type == 'cargoson' and integration_level == 'rate')</attribute>
+            </xpath>
+            <!-- Hide second Add (free delivery) for Cargoson so only one Add shows in booking mode -->
+            <xpath expr="//button[@name='button_confirm'][3]" position="attributes">
+                <attribute name="invisible">context.get('carrier_recompute') or display_price or delivery_type in ('fixed', 'base_on_rule') or delivery_type == 'cargoson'</attribute>
+            </xpath>
+            <xpath expr="//button[@name='button_confirm'][2]" position="after">
+                <field name="use_for" invisible="1"/>
+                <field name="has_selected_rate" invisible="1"/>
+                <!-- Create Draft button - only for Cargoson draft (rate); booking uses standard Add -->
+                <button name="create_cargoson_draft" 
+                        invisible="delivery_type != 'cargoson' or integration_level != 'rate'" 
+                        type="object" 
+                        string="Create Draft" 
+                        class="btn-primary"/>
+                <!-- Create Booking button - hidden as not needed anymore -->
+                <button name="create_cargoson_booking" 
+                        invisible="1" 
+                        type="object" 
+                        string="Create Booking" 
+                        class="btn-primary"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="view_stock_package_type_form_cargoson" model="ir.ui.view">
+        <field name="name">stock.package.type.inherit.cargoson</field>
+        <field name="model">stock.package.type</field>
+        <field name="inherit_id" ref="stock.stock_package_type_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='length_uom_name']" position='attributes'>
+                <attribute name="string">Size (L×W×H)</attribute>
+            </xpath>
+            <xpath expr="//div[hasclass('o_row')][1]/span[last()]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//div[@name='base_weight']/span" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//div[@name='max_weight']/span" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <!-- Odoo 19: stock.package.type form has no group inside group[name=delivery] (was nested in 17/18) -->
+            <xpath expr="//group[@name='delivery']" position="inside">
+                <div class="text-muted mt-2" invisible="package_carrier_type != 'cargoson'">
+                    <field name="package_carrier_type" invisible="1"/>
+                    <span>The units of weight and dimensions are defined on the shipping method page.</span>
+                </div>
+            </xpath>
+
+            <xpath expr="//field[@name='width']" position='attributes'>
+                <attribute name="invisible">0</attribute>
+            </xpath>
+            <xpath expr="//field[@name='height']" position='attributes'>
+                <attribute name="invisible">0</attribute>
+            </xpath>
+            <xpath expr="//field[@name='length_uom_name']" position='attributes'>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='shipper_package_code']" position='after'>
+                <field name="use_product_dimensions"/>
+                <field name="is_crate"/>
+                <field name="is_active"/>
+                <field name="qty_editable"/>
+                <field name="use_default_qty"/>
+                <field name="default_qty"/>
+                <field name="default_product_id"/>
+                <field name="one_line_all" string="One package line for multiple products"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

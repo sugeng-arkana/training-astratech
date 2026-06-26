@@ -1,0 +1,16 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cargoson_courier,cargoson.courier.sale_salesman,model_cargoson_courier,stock.group_stock_user,1,0,0,0
+access_cargoson_courier_manager,cargoson.courier.sale_manager,model_cargoson_courier,stock.group_stock_user,1,1,1,1
+access_cargoson_courier_stock_user,cargoson.courier.stock_user,model_cargoson_courier,stock.group_stock_user,1,0,0,0
+access_cargoson_courier_stock_manager,cargoson.courier.stock_manager,model_cargoson_courier,stock.group_stock_user,1,1,1,1
+access_cargoson_channel,cargoson.channel.sale_salesman,model_cargoson_channel,stock.group_stock_user,1,0,0,0
+access_cargoson_channel_manager,cargoson.channel.sale_manager,model_cargoson_channel,stock.group_stock_user,1,1,1,1
+access_cargoson_channel_stock_user,cargoson.channel.stock_user,model_cargoson_channel,stock.group_stock_user,1,0,0,0
+access_cargoson_channel_stock_manager,cargoson.channel.stock_manager,model_cargoson_channel,stock.group_stock_user,1,1,1,1
+access_carrier_rates_manager,carrier_rates,model_carrier_rates,stock.group_stock_user,1,1,1,1
+access_choose_package_types,choose_package_types,model_choose_package_types,stock.group_stock_user,1,1,1,1
+access_sale_choose_package_types,sale_choose_package_types,model_sale_choose_package_types,stock.group_stock_user,1,1,1,1
+access_picking_choose_package_types,picking_choose_package_types,model_picking_choose_package_types,stock.group_stock_user,1,1,1,1
+access_replan_delivery_carrier,replan_delivery_carrier,model_replan_delivery_carrier,stock.group_stock_user,1,1,1,1
+access_replan_carrier_rates,replan_carrier_rates,model_replan_carrier_rates,stock.group_stock_user,1,1,1,1
+access_replan_package_types,replan_package_types,model_replan_package_types,stock.group_stock_user,1,1,1,1

@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <record id="view_delivery_carrier_form_inherit_delivery_cargoson" model="ir.ui.view">
+        <field name="name">delivery.carrier.form.inherit.delivery.cargoson</field>
+        <field name="model">delivery.carrier</field>
+        <field name="inherit_id" ref="delivery.view_delivery_carrier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='title']" position="after">
+                <div colspan="2" class="alert alert-warning" invisible="delivery_type != 'cargoson' or prod_environment == True" role="status">
+                    <p><i class="fa fa-exclamation-triangle"/> In test environment, to avoid charges, your shippings are automatically <b>cancelled</b> after the label creation. The amount of cancelled shipment will be returned in next 3-4 days.</p>
+                </div>
+            </xpath>
+            <xpath expr="//field[@name='product_id']" position='after'>
+                <field name="collection_time" widget="float_time"/>
+                <field name="delivery_time" widget="float_time"/>
+                <field name="use_for" required="1"/>
+            </xpath>
+            <xpath expr="//page[@name='destination']" position='attributes'>
+                <attribute name="name">destination</attribute>
+            </xpath>
+            <xpath expr="//page[@name='destination']//group[1]" position="inside">
+                <label for="use_destination_filtering" string="Restrict by allowed destination (country) on Sales Order?"/>
+                <field name="use_destination_filtering"/>
+            </xpath>
+            <xpath expr="//page[@name='destination']" position='before'>
+                <page string="Cargoson Configuration" name="cargoson_configuration" invisible="delivery_type != 'cargoson'">
+                    <group>
+                        <group>
+                            <field name="production_url" />
+                            <field name="production_token" />
+                            <field name="cargoson_access_token" string="Cargonson Test Token"/>
+                        </group>
+                        <group>
+                            <field name="cargoson_payment_method" required="delivery_type == 'cargoson'"/>
+                            <field name="cargoson_default_package_type_id" context="{'default_package_carrier_type': 'cargoson'}" domain="[('package_carrier_type', '=', 'cargoson')]" required="delivery_type == 'cargoson'"/>
+                            <field name="cargoson_weight_uom" help="Unit for weight in the shipping wizard. US users: select lb."/>
+                            <field name="cargoson_length_uom" help="Unit for dimensions in the shipping wizard. US users: select ft."/>
+                            <field name="incoterms_id"/>
+                            <field name="collection_with_tail_lift"/>
+                            <field name="collection_contact_id"/>
+                            <field name="delivery_with_tail_lift"/>
+                            <field name="delivery_sms_notification"/>
+                            <field name="use_freight_payer"/>
+                            <field name="freight_payer_type" invisible="not use_freight_payer"/>
+                            <field name="us_address"/>
+                            <field name="cargoson_send_units"/>
+                            <field name="request_carrier_api_prices"/>
+                            <field name="send_goods_value"/>
+                            <field name="integration_level"/>
+                            <field name="trigger_picking_type_id" 
+                                   help="Select which picking type should trigger booking creation and label download. For one-step delivery, leave empty (defaults to outgoing). For multi-step (pick/pack/ship), select the step where booking should happen."/>
+                            <field name="replan_delivery"/>
+                            <field name="replan_keep_sales_price" invisible="not replan_delivery"/>
+                        </group>
+                        <group string="Internal Remark (Cargoson)">
+                            <field name="include_cost_in_private_remark"/>
+                            <field name="private_remark_cost_type" invisible="not include_cost_in_private_remark"/>
+                        </group>
+                        <group string="Commitment Date">
+                            <field name="use_commitment_date"/>
+                            <field name="commitment_date_for" invisible="not use_commitment_date"/>
+                            <field name="delivery_window_time_from" widget="float_time" invisible="not use_commitment_date or commitment_date_for != 'delivery'"/>
+                        </group>
+                        <group>
+                            <group>
+                                <label for="cargoson_courier_ids" />
+                                <button name="action_get_couriers2" title="Sync Couriers from cargoson" class="fa fa-refresh oe_inline oe_link" type="object"/>
+                            </group>
+                            <field name="cargoson_courier_ids" context="{'list_view_ref': 'delivery_cargoson.view_cargoson_courier_list'}"/>
+                        </group>
+                    </group>
+                    <group string="PDF Document Download Settings">
+                        <group>
+                            <field name="download_label"/>
+                            <field name="download_cmr"/>
+                            <field name="download_waybill"/>
+                            <field name="download_bol"/>
+                        </group>
+                        <group>
+                            <field name="download_delay_seconds"/>
+                            <field name="download_max_retries"/>
+                        </group>
+                        <group>
+                            <div class="alert alert-info" role="alert">
+                                <p><strong>Document Download Configuration</strong></p>
+                                <p>Select which documents should be automatically downloaded and stored as PDF attachments when a stock picking is validated.</p>
+                                <p>Documents are downloaded from Cargoson and stored in Odoo for easy access and offline availability.</p>
+                                <p><strong>Note:</strong> This works for both Draft (queries) and Booking (rate_and_ship) integration levels.</p>
+                                <p><strong>Multi-step Delivery:</strong> Downloads will only occur when the picking type matches the "Trigger on Picking Type" setting above. If not set, defaults to outgoing picking type.</p>
+                                <p><strong>Download Delay:</strong> Wait time (in seconds) before attempting to download PDFs. This gives Cargoson time to generate documents after booking creation. Increase if downloads sometimes fail.</p>
+                                <p><strong>Max Retries:</strong> Number of retry attempts if a PDF download fails. Each retry waits the configured delay before attempting again.</p>
+                            </div>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

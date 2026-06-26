@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="cargoson_carrier_view_tree" model="ir.ui.view">
+        <field name="name">cargoson.courier.tree</field>
+        <field name="model">cargoson.courier</field>
+        <field name="arch" type="xml">
+            <list string="Cargoson Courier">
+                <field name="name"/>
+                <field name="service_id"/>
+                <field name="service_name"/>
+            </list>
+        </field>
+
+    </record>
+
+    <record id="action_cargoson_carrier" model="ir.actions.act_window">
+        <field name="name">Cargoson Courier</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">cargoson.courier</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+            </p>
+        </field>
+    </record>
+
+
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_cargoson_courier_list" model="ir.ui.view">
+        <field name="name">cargoson.courier.list</field>
+        <field name="model">cargoson.courier</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="service_id"/>
+                <field name="service_name"/>
+            </list>
+        </field>
+    </record>
+</odoo>
